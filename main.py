@@ -88,7 +88,7 @@ def main():
                 print("\n❌ Empleado no encontrado.")
 
         elif opcion == '5':
-            dni = input("Ingrese DNI del empleado para registrar vacaciones: ")
+            dni = input("Ingrese DNI del empleado para registrar una capacitacion: ")
             empleado = sistema.buscar_empleado(dni)
             if empleado:
                 nombre_curso = input("Nombre del curso: ")
