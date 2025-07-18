@@ -86,6 +86,19 @@ def main():
                 print("\n✅ Vacaciones registradas.")
             else:
                 print("\n❌ Empleado no encontrado.")
+
+        elif opcion == '5':
+            dni = input("Ingrese DNI del empleado para registrar vacaciones: ")
+            empleado = sistema.buscar_empleado(dni)
+            if empleado:
+                nombre_curso = input("Nombre del curso: ")
+                inicio_str = input("Fecha de inicio (YYYY-MM-DD): ")
+                duracion_horas = int(input("Horas: "))
+                capacitacion = Capacitacion(nombre_curso, date.fromisoformat(inicio_str), duracion_horas)
+                empleado.agregar_capacitacion(capacitacion)
+                print("\n✅ Capacitación registrada.")
+            else:
+                print("\n❌ Empleado no encontrado.")
         
         elif opcion == '6':
             dni = input("Ingrese DNI del empleado para registrar asistencia: ")
